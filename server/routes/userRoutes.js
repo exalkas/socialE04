@@ -24,22 +24,22 @@ router.post('/register',
     register)
 
 router.post('/login', 
-    oneOf([
-        body('username')
-        .trim()
-        .escape()
-        .notEmpty()
-        .withMessage('Username is mandatory')
-        .isLength({min: 3})
-        .withMessage('user name must be at least 3 characters'),
+    // oneOf([
+    //     body('username')
+    //     .trim()
+    //     .escape()
+    //     .notEmpty()
+    //     .withMessage('Username is mandatory')
+    //     .isLength({min: 3})
+    //     .withMessage('user name must be at least 3 characters'),
 
-        body('email')
-        .trim()
-        .escape()
-        .isEmail()
-        .withMessage('please provide a valid email')
+    //     body('email')
+    //     .trim()
+    //     .escape()
+    //     .isEmail()
+    //     .withMessage('please provide a valid email')
 
-    ]),
+    // ]),
 
     body('password')
     .notEmpty()
